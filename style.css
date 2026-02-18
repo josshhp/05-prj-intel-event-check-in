@@ -25,7 +25,8 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(
+  background:
+    linear-gradient(
       135deg,
       rgba(0, 153, 219, 0.9) 0%,
       rgba(0, 104, 181, 0.9) 50%,
@@ -312,8 +313,21 @@ select {
 }
 
 .team-stats h3 {
-  color: #64748b;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 113, 197, 0.12),
+    rgba(0, 174, 239, 0.12)
+  );
+  color: #003c71;
+  border: 1px solid rgba(0, 113, 197, 0.2);
   font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
   margin-bottom: 20px;
 }
 
@@ -329,6 +343,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  text-align: left;
 }
 
 /* Team card colors */
@@ -351,6 +366,40 @@ select {
   font-size: 15px;
   font-weight: 500;
   color: #475569;
+}
+
+.team-count {
+  font-size: 22px;
+  color: #0071c5;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.team-attendee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  padding-top: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.team-attendee-item {
+  padding: 6px 2px;
+  font-size: 15px;
+  color: #334155;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.7);
+}
+
+.team-attendee-item:last-child {
+  border-bottom: none;
+}
+
+.team-attendee-empty {
+  padding: 6px 2px;
+  color: #94a3b8;
+  font-size: 15px;
 }
 
 /* Mobile responsive */
@@ -385,5 +434,9 @@ select {
 
   .teams-grid {
     grid-template-columns: 1fr;
+  }
+
+  .team-attendee-list {
+    max-height: none;
   }
 }
